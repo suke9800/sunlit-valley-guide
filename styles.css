@@ -493,6 +493,16 @@ kbd {
   font-weight: 900;
 }
 
+.sidebar-icon {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.25;
+}
+
 .sidebar-item.is-active span {
   background: var(--sidebar-accent);
   color: var(--sidebar-active-text);
