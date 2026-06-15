@@ -5,42 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Ventadew Valley 서버 신규 유저용 설치, 접속, 보이스챗, 지도, 청크 보호 가이드"
+      content="Bentadew Valley 서버 신규 유저용 설치, 접속, 보이스챗, 지도, 청크 보호, 퀘스트북 가이드"
     />
     <meta name="theme-color" content="#1f5d44" />
-    <title>Ventadew Valley 입문 가이드</title>
-    <link rel="icon" href="assets/ventadew-logo-small.png" type="image/png" />
+    <title>Bentadew Valley 입문 가이드</title>
+    <link rel="icon" href="assets/bentadew-logo.png" type="image/png" />
     <link rel="preload" as="image" href="assets/sunlit-valley-hero.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Ventadew Valley 가이드 처음으로">
-        <img class="brand-logo" src="assets/ventadew-logo-small.png" alt="" />
+      <a class="brand" href="#install" aria-label="Bentadew Valley 가이드 처음으로">
+        <img class="brand-logo" src="assets/bentadew-logo.png" alt="" />
         <span>
-          <strong>Ventadew Valley</strong>
+          <strong>Bentadew Valley</strong>
           <small>벤타듀 밸리 서버 가이드</small>
         </span>
       </a>
-      <nav class="top-nav" aria-label="주요 이동">
-        <a href="#install">설치</a>
-        <a href="#join">접속</a>
-        <a href="#voice">보이스</a>
-        <a href="#map">지도</a>
-        <a href="#rules">규칙</a>
+      <nav class="top-nav" aria-label="빠른 이동">
+        <button type="button" data-page-button="install">설치</button>
+        <button type="button" data-page-button="join">접속</button>
+        <button type="button" data-page-button="voice">보이스</button>
+        <button type="button" data-page-button="map">지도</button>
+        <button type="button" data-page-button="quest">퀘스트</button>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero">
+    <main>
+      <section class="hero" id="top">
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="eyebrow">Minecraft Java 1.20.1 · Forge · CurseForge</p>
           <h1>벤타듀 밸리 접속 가이드</h1>
           <p class="hero-copy">
-            CurseForge 앱에서 모드팩을 설치하고, 보이스챗을 확인한 뒤, 화이트리스트 등록을 받고
-            서버 주소로 접속하세요.
+            앱 설치부터 서버 접속, 보이스챗, 지도와 청크 보호, 퀘스트북까지 처음 필요한 것만 정리했습니다.
           </p>
 
           <div class="quick-panel" aria-label="서버 접속 정보">
@@ -57,289 +56,257 @@
             <a class="primary-link" href="https://www.curseforge.com/download/app" target="_blank" rel="noreferrer">
               CurseForge 앱 받기
             </a>
-            <a class="secondary-link" href="https://www.curseforge.com/minecraft/modpacks/society-sunlit-valley" target="_blank" rel="noreferrer">
-              모드팩 페이지
-            </a>
           </div>
         </div>
       </section>
 
-      <section class="section intro-band" aria-labelledby="checklist-title">
-        <div class="section-heading">
-          <p class="eyebrow">한눈에 보기</p>
-          <h2 id="checklist-title">설치부터 접속까지 흐름</h2>
-        </div>
-        <div class="flow-overview">
-          <figure class="guide-visual">
-            <img src="assets/joining-flow.png" alt="앱 설치, 모드팩 검색, 보이스챗 설정, 서버 접속, 청크 보호 흐름을 보여주는 안내 이미지" />
-          </figure>
-          <div class="check-grid compact">
-            <article class="check-item">
-              <span class="step-number">1</span>
-              <h3>Java Edition 확인</h3>
-              <p>PC용 Minecraft Java Edition이 필요합니다.</p>
-            </article>
-            <article class="check-item">
-              <span class="step-number">2</span>
-              <h3>CurseForge 설치</h3>
-              <p>앱에서 모드팩을 검색하고 설치합니다.</p>
-            </article>
-            <article class="check-item">
-              <span class="step-number">3</span>
-              <h3>화이트리스트 요청</h3>
-              <p>디스코드 <strong>#화이트리스트</strong> 채널에 닉네임을 남깁니다.</p>
-            </article>
-            <article class="check-item">
-              <span class="step-number">4</span>
-              <h3>서버 접속</h3>
-              <p><code>34.47.112.1:25565</code>를 입력합니다.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+      <section class="guide-shell" aria-label="Bentadew Valley 신규 유저 안내">
+        <aside class="guide-sidebar" aria-label="가이드 목차">
+          <p class="sidebar-kicker">목차</p>
+          <button class="sidebar-item is-active" type="button" data-page-button="install">
+            <span>01</span>
+            <strong>설치</strong>
+            <small>CurseForge 앱에서 모드팩 받기</small>
+          </button>
+          <button class="sidebar-item" type="button" data-page-button="join">
+            <span>02</span>
+            <strong>접속</strong>
+            <small>화이트리스트와 서버 주소</small>
+          </button>
+          <button class="sidebar-item" type="button" data-page-button="voice">
+            <span>03</span>
+            <strong>보이스</strong>
+            <small>Simple Voice Chat 설정</small>
+          </button>
+          <button class="sidebar-item" type="button" data-page-button="map">
+            <span>04</span>
+            <strong>지도</strong>
+            <small>J 키, 청크 보호, 강제 로딩</small>
+          </button>
+          <button class="sidebar-item" type="button" data-page-button="quest">
+            <span>05</span>
+            <strong>퀘스트</strong>
+            <small>퀘스트북 메뉴 찾기</small>
+          </button>
+        </aside>
 
-      <section id="install" class="section split-section" aria-labelledby="install-title">
-        <div class="section-heading sticky-heading">
-          <p class="eyebrow">설치</p>
-          <h2 id="install-title">CurseForge 앱에서 모드팩 설치</h2>
-          <p>
-            수동으로 파일을 넣지 말고, 앱에서 같은 모드팩을 설치하는 방식이 가장 쉽습니다.
-          </p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <h3>1. CurseForge 앱 다운로드</h3>
-            <p>
-              <a href="https://www.curseforge.com/download/app" target="_blank" rel="noreferrer">공식 다운로드 페이지</a>에서
-              Windows용 앱을 설치합니다. 설치 후 앱을 켜고 <strong>Minecraft</strong>를 선택하세요.
-            </p>
+        <div class="guide-pages">
+          <article class="guide-page is-active" id="install" data-page="install">
+            <div class="page-heading">
+              <p class="eyebrow">설치</p>
+              <h2>CurseForge 앱에서 모드팩 설치하기</h2>
+              <p>
+                모드 파일을 직접 넣지 말고 앱에서 검색해서 설치하세요. 친구들도 같은 방식으로 설치하면 됩니다.
+              </p>
+            </div>
+            <img class="section-art" src="assets/install-guide.png" alt="앱에서 모드팩을 설치하는 분위기의 장식 이미지" />
+            <ol class="step-list">
+              <li>
+                <strong>CurseForge 앱 설치</strong>
+                <span>
+                  <a href="https://www.curseforge.com/download/app" target="_blank" rel="noreferrer">CurseForge 공식 앱</a>을 받고 실행합니다.
+                </span>
+              </li>
+              <li>
+                <strong>Minecraft 선택</strong>
+                <span>처음 실행하면 게임 목록이 나옵니다. 여기서 <b>Minecraft</b>를 누릅니다.</span>
+              </li>
+              <li>
+                <strong>Browse 또는 Search 열기</strong>
+                <span>상단 검색창이나 <b>Browse Modpacks</b> 화면에서 모드팩을 검색합니다.</span>
+              </li>
+              <li>
+                <strong>검색어 입력</strong>
+                <span><b>Society: Sunlit Valley</b>를 검색하고, 같은 이름의 모드팩을 고른 뒤 <b>Install</b>을 누릅니다.</span>
+              </li>
+              <li>
+                <strong>Play 실행</strong>
+                <span><b>My Modpacks</b>에서 설치된 프로필을 열고 <b>Play</b>를 누릅니다. Minecraft Launcher가 뜨면 다시 <b>Play</b>를 누릅니다.</span>
+              </li>
+            </ol>
+            <div class="note-row">
+              <div>
+                <strong>램 설정</strong>
+                <span>프로필 설정에서 Allocated Memory를 약 <b>8192 MB</b>로 맞추는 것을 추천합니다.</span>
+              </div>
+              <div>
+                <strong>보이스 모드</strong>
+                <span>Simple Voice Chat이 없으면 같은 프로필에서 <b>Add More Content</b>를 눌러 추가합니다.</span>
+              </div>
+            </div>
           </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <h3>2. 모드팩 검색</h3>
-            <p>
-              Minecraft 화면에서 <strong>Browse</strong> 또는 <strong>Search</strong>를 누르고
-              <strong>Society: Sunlit Valley</strong>를 검색합니다.
-            </p>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <h3>3. Install 클릭</h3>
-            <p>
-              제작자가 <strong>Chakyl</strong>인 모드팩을 고르고 <strong>Install</strong>을 누릅니다.
-              서버 기준은 <strong>4.0.9 / Minecraft 1.20.1 / Forge</strong>입니다.
-            </p>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <h3>4. 메모리 설정</h3>
-            <p>
-              프로필 오른쪽의 점 세 개 또는 설정에서 <strong>Allocated Memory</strong>를
-              약 <strong>8192 MB</strong>로 맞춥니다. 멀티 서버여도 내 PC가 모드와 화면을 직접 불러오기 때문에 필요합니다.
-            </p>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <h3>5. Play 실행</h3>
-            <p>
-              CurseForge의 <strong>Play</strong> 버튼을 누르면 Minecraft Launcher가 열립니다.
-              런처에서 다시 <strong>Play</strong>를 눌러 게임을 켜세요.
-            </p>
-          </article>
-        </div>
-      </section>
 
-      <section id="voice" class="section split-section alt" aria-labelledby="voice-title">
-        <div class="section-heading sticky-heading">
-          <p class="eyebrow">보이스챗</p>
-          <h2 id="voice-title">Simple Voice Chat 확인</h2>
-          <p>
-            서버는 근처 사람끼리 말이 들리는 보이스챗을 씁니다. 포트는 서버에서 이미 열려 있습니다.
-          </p>
-        </div>
-        <div class="instruction-grid">
-          <article class="instruction">
-            <h3>모드가 없다면 추가</h3>
-            <p>
-              CurseForge에서 Sunlit Valley 프로필을 누른 뒤 <strong>Add More Content</strong>를 누르고
-              <strong>Simple Voice Chat</strong>을 검색해서 설치합니다.
-            </p>
-            <a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank" rel="noreferrer">
-              Simple Voice Chat 페이지
-            </a>
+          <article class="guide-page" id="join" data-page="join" hidden>
+            <div class="page-heading">
+              <p class="eyebrow">접속</p>
+              <h2>화이트리스트 등록 후 서버 들어가기</h2>
+              <p>화이트리스트에 등록된 마인크래프트 닉네임만 서버에 들어올 수 있습니다.</p>
+            </div>
+            <img class="section-art" src="assets/join-guide.png" alt="화이트리스트 서버에 접속하는 분위기의 장식 이미지" />
+            <div class="server-copy-card">
+              <span class="label">서버 주소</span>
+              <code>34.47.112.1:25565</code>
+              <button class="copy-button" data-copy="34.47.112.1:25565" type="button">주소 복사</button>
+            </div>
+            <ol class="step-list">
+              <li>
+                <strong>닉네임 보내기</strong>
+                <span>디스코드 <b>#화이트리스트</b> 채널에 자기 마인크래프트 닉네임을 정확히 적습니다.</span>
+              </li>
+              <li>
+                <strong>관리자 등록 기다리기</strong>
+                <span>등록 전에는 접속해도 “white-listed” 관련 문구가 뜨면서 들어갈 수 없습니다.</span>
+              </li>
+              <li>
+                <strong>Multiplayer 열기</strong>
+                <span>게임에서 <b>Multiplayer</b> → <b>Add Server</b> 또는 <b>Direct Connection</b>을 누릅니다.</span>
+              </li>
+              <li>
+                <strong>주소 입력</strong>
+                <span><code>34.47.112.1:25565</code>를 입력하고 접속합니다.</span>
+              </li>
+            </ol>
+            <div class="note-row">
+              <div>
+                <strong>서버 기본 약속</strong>
+                <span>다른 사람 건축물과 청크는 건드리지 말고, 문제가 생기면 좌표와 상황을 같이 알려주세요.</span>
+              </div>
+              <div>
+                <strong>접속이 안 될 때</strong>
+                <span>닉네임 철자, 모드팩 버전, 화이트리스트 등록 여부를 먼저 확인합니다.</span>
+              </div>
+            </div>
           </article>
-          <article class="instruction">
-            <h3>게임 안에서 V 키</h3>
-            <p>
-              접속 후 <kbd>V</kbd>를 누르면 보이스챗 메뉴가 열립니다. 설정 버튼에서 마이크와 스피커 장치를 고르고
-              마이크 테스트를 해주세요.
-            </p>
-          </article>
-          <article class="instruction">
-            <h3>처음 세팅 추천</h3>
-            <p>
-              이어폰 또는 헤드셋을 쓰고, 입력 장치가 실제 마이크인지 확인하세요. 말이 계속 새면
-              Push To Talk로 바꿔서 테스트합니다.
-            </p>
-          </article>
-        </div>
-      </section>
 
-      <section id="join" class="section split-section" aria-labelledby="join-title">
-        <div class="section-heading sticky-heading">
-          <p class="eyebrow">접속</p>
-          <h2 id="join-title">화이트리스트 등록 후 접속</h2>
-          <p>
-            등록되지 않은 닉네임은 서버에서 바로 튕깁니다. 닉네임은 대소문자를 정확히 적어주세요.
-          </p>
-        </div>
-        <div class="join-box">
-          <ol class="number-list">
-            <li>디스코드 <strong>#화이트리스트</strong> 채널에 마인크래프트 닉네임을 남깁니다.</li>
-            <li>관리자가 등록했다는 답을 주면 게임을 켭니다.</li>
-            <li><strong>Multiplayer</strong>를 누릅니다.</li>
-            <li><strong>Add Server</strong> 또는 <strong>Direct Connection</strong>을 누릅니다.</li>
-            <li>주소에 <code>34.47.112.1:25565</code>를 입력하고 접속합니다.</li>
-          </ol>
-          <div class="server-card">
-            <span class="label">복사용 주소</span>
-            <code>34.47.112.1:25565</code>
-            <button class="copy-button" data-copy="34.47.112.1:25565" type="button">
-              복사
-            </button>
-          </div>
-        </div>
-      </section>
+          <article class="guide-page" id="voice" data-page="voice" hidden>
+            <div class="page-heading">
+              <p class="eyebrow">보이스</p>
+              <h2>Simple Voice Chat 설정하기</h2>
+              <p>이 서버는 가까이 있는 사람끼리 목소리가 들리는 보이스챗을 사용합니다.</p>
+            </div>
+            <img class="section-art" src="assets/voice-guide.png" alt="마이크와 헤드셋으로 보이스챗을 설정하는 분위기의 장식 이미지" />
+            <ol class="step-list">
+              <li>
+                <strong>모드 확인</strong>
+                <span>CurseForge 프로필에서 <b>Simple Voice Chat</b>이 설치되어 있는지 확인합니다.</span>
+              </li>
+              <li>
+                <strong>없으면 추가</strong>
+                <span>프로필을 누르고 <b>Add More Content</b> → <b>Simple Voice Chat</b> 검색 → 설치합니다.</span>
+              </li>
+              <li>
+                <strong>게임 안에서 V 키</strong>
+                <span>서버에 들어간 뒤 <kbd>V</kbd>를 누르면 보이스챗 메뉴가 열립니다.</span>
+              </li>
+              <li>
+                <strong>입출력 장치 선택</strong>
+                <span>설정에서 실제 마이크와 헤드셋/이어폰을 고르고, 마이크 테스트를 해봅니다.</span>
+              </li>
+            </ol>
+            <div class="note-row">
+              <div>
+                <strong>추천</strong>
+                <span>처음에는 이어폰 또는 헤드셋을 쓰고, 잡음이 있으면 Push To Talk로 바꿔 테스트하세요.</span>
+              </div>
+              <div>
+                <strong>안 들릴 때</strong>
+                <span>Windows 입력 장치, 게임 안 V 메뉴, 마이크 음소거 상태를 차례대로 확인합니다.</span>
+              </div>
+            </div>
+          </article>
 
-      <section id="map" class="section split-section alt" aria-labelledby="map-title">
-        <div class="section-heading sticky-heading">
-          <p class="eyebrow">지도와 땅 보호</p>
-          <h2 id="map-title">J 키, 청크 보호, 강제 로딩</h2>
-          <p>
-            자기 집이나 농장은 FTB Chunks로 보호하세요. 서버 기본 제한은 개인당 보호 청크 16개, 강제 로딩 3개입니다.
-          </p>
-        </div>
-        <div class="map-guide">
-          <article>
-            <h3>지도 열기</h3>
-            <p>
-              보통 <kbd>J</kbd> 키로 큰 지도를 엽니다. 안 열리면 <strong>Options → Controls</strong>에서
-              <strong>Map</strong> 또는 <strong>FTB Chunks</strong>를 검색해 키를 확인하세요.
-            </p>
+          <article class="guide-page" id="map" data-page="map" hidden>
+            <div class="page-heading">
+              <p class="eyebrow">지도</p>
+              <h2>J 키 지도, 청크 보호, 강제 로딩</h2>
+              <p>집이나 중요한 농장 주변은 FTB Chunks로 보호하세요. 서버 설정은 개인당 보호 16청크, 강제 로딩 3청크입니다.</p>
+            </div>
+            <img class="section-art" src="assets/map-guide.png" alt="지도와 청크 보호를 보여주는 장식 이미지" />
+            <ol class="step-list">
+              <li>
+                <strong>지도 열기</strong>
+                <span><kbd>J</kbd> 키를 누르면 큰 지도가 열립니다. 안 열리면 Controls에서 Map 또는 FTB Chunks 키를 확인하세요.</span>
+              </li>
+              <li>
+                <strong>청크 보호 화면 열기</strong>
+                <span>지도 오른쪽에 있는 <b>격자무늬 아이콘</b>을 누르면 청크 보호 모드로 들어갑니다.</span>
+              </li>
+              <li>
+                <strong>청크 보호하기</strong>
+                <span>보호할 칸을 클릭합니다. 여러 칸은 드래그해서 선택합니다.</span>
+              </li>
+              <li>
+                <strong>보호 해제하기</strong>
+                <span>이미 보호한 칸은 우클릭하거나 다시 선택해서 해제합니다.</span>
+              </li>
+              <li>
+                <strong>강제 로딩 켜기</strong>
+                <span>보호한 청크에서 <kbd>Shift</kbd>를 누른 채 클릭하면 강제 로딩을 켤 수 있습니다.</span>
+              </li>
+            </ol>
+            <div class="note-row strong-notes">
+              <div>
+                <strong>강제 로딩이란?</strong>
+                <span>내가 접속해 있지 않거나 멀리 있어도 그 청크의 농장이나 기계가 계속 돌아가게 하는 기능입니다.</span>
+              </div>
+              <div>
+                <strong>왜 3개만?</strong>
+                <span>강제 로딩이 많으면 서버가 계속 일을 해야 해서 느려질 수 있습니다. 꼭 필요한 곳에만 켜세요.</span>
+              </div>
+              <div>
+                <strong>보호와 강제 로딩은 다름</strong>
+                <span>보호는 남이 못 건드리게 하는 것이고, 강제 로딩은 그 지역을 계속 작동시키는 것입니다.</span>
+              </div>
+            </div>
           </article>
-          <article>
-            <h3>청크 보호하기</h3>
-            <p>
-              인벤토리의 파란 지도 아이콘 또는 FTB Chunks 지도를 열고, 보호할 칸을 클릭합니다.
-              여러 칸은 클릭한 채 드래그합니다.
-            </p>
-          </article>
-          <article>
-            <h3>보호 해제하기</h3>
-            <p>
-              보호된 칸을 우클릭합니다. 여러 칸은 우클릭한 채 드래그합니다.
-            </p>
-          </article>
-          <article>
-            <h3>강제 로딩</h3>
-            <p>
-              보호한 청크에서 <kbd>Shift</kbd>를 누른 채 클릭하면 강제 로딩을 켭니다.
-              초록 선이 보이면 켜진 상태입니다. 너무 많이 켜면 서버가 느려질 수 있습니다.
-            </p>
-          </article>
-        </div>
-        <p class="source-note">
-          자세한 기준은
-          <a href="https://docs.feed-the-beast.com/mod-docs/mods/suite/Chunks/claiming-loading/" target="_blank" rel="noreferrer">
-            FTB Chunks 공식 문서
-          </a>를 참고하세요.
-        </p>
-      </section>
 
-      <section id="basics" class="section basics-section" aria-labelledby="basics-title">
-        <div class="section-heading">
-          <p class="eyebrow">초반 플레이</p>
-          <h2 id="basics-title">들어오면 먼저 할 것</h2>
-        </div>
-        <div class="basics-grid">
-          <article class="basic-card">
-            <h3>퀘스트북 확인</h3>
-            <p>모드팩 진행 방향은 퀘스트북을 따라가면 됩니다. 농사, 동물, 낚시, 광산 순서로 천천히 열립니다.</p>
+          <article class="guide-page" id="quest" data-page="quest" hidden>
+            <div class="page-heading">
+              <p class="eyebrow">퀘스트</p>
+              <h2>퀘스트북에서 메뉴 찾기</h2>
+              <p>처음에는 퀘스트북 안의 사이드 메뉴가 잘 안 보일 수 있습니다. 오른쪽 클릭과 옆 화살표를 기억하세요.</p>
+            </div>
+            <img class="section-art" src="assets/quest-guide.png" alt="퀘스트북과 사이드 메뉴를 보여주는 장식 이미지" />
+            <ol class="step-list">
+              <li>
+                <strong>퀘스트북 열기</strong>
+                <span>인벤토리에서 퀘스트북을 들고 <b>우클릭</b>하면 퀘스트 화면이 열립니다.</span>
+              </li>
+              <li>
+                <strong>사이드 화살표 보기</strong>
+                <span>퀘스트북 화면 옆에 작은 <b>화살표 메뉴</b>가 있습니다. 이걸 눌러야 다른 메뉴들이 보입니다.</span>
+              </li>
+              <li>
+                <strong>카테고리 이동</strong>
+                <span>농사, 동물, 낚시, 광산, 탐험 같은 여러 진행 메뉴를 옆 메뉴에서 찾을 수 있습니다.</span>
+              </li>
+              <li>
+                <strong>막히면 퀘스트부터 확인</strong>
+                <span>무엇을 해야 할지 모르겠으면 퀘스트북에서 현재 열려 있는 목표를 먼저 확인하세요.</span>
+              </li>
+            </ol>
+            <div class="note-row">
+              <div>
+                <strong>처음 목표</strong>
+                <span>초반에는 농사와 기본 생활 퀘스트를 따라가면 자연스럽게 다음 콘텐츠가 열립니다.</span>
+              </div>
+              <div>
+                <strong>보상 받기</strong>
+                <span>완료한 퀘스트는 보상을 직접 눌러 받아야 할 수 있습니다.</span>
+              </div>
+            </div>
           </article>
-          <article class="basic-card">
-            <h3>마을과 야생 구역</h3>
-            <p>개인 집이나 농장은 원하는 자리에 만들고, 중요한 곳은 자기 청크로 보호합니다.</p>
-          </article>
-          <article class="basic-card">
-            <h3>웨이스톤 사용</h3>
-            <p>허브의 웨이스톤으로 주요 이동 지점에 갈 수 있습니다. 이름이 정리된 곳만 사용하세요.</p>
-          </article>
-          <article class="basic-card">
-            <h3>서버 렉 줄이기</h3>
-            <p>멀리 날아다니며 새 청크를 빠르게 열면 서버가 느려집니다. 새 지역 탐험은 천천히 이동해주세요.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="rules" class="section rules-section" aria-labelledby="rules-title">
-        <div class="section-heading">
-          <p class="eyebrow">규칙</p>
-          <h2 id="rules-title">서버 기본 약속</h2>
-        </div>
-        <div class="rules-list">
-          <div>
-            <strong>남의 청크 건드리지 않기</strong>
-            <span>보호가 안 된 곳이어도 다른 사람 건축물은 건드리지 않습니다.</span>
-          </div>
-          <div>
-            <strong>강제 로딩은 필요한 곳만</strong>
-            <span>개인당 3개 제한입니다. 농장이나 기계가 꼭 돌아가야 하는 곳에만 씁니다.</span>
-          </div>
-          <div>
-            <strong>웨이스톤 이름 확인</strong>
-            <span>이동하기 전에 목적지 이름을 확인하고, 잘못 이동했으면 허브로 돌아와 다시 선택합니다.</span>
-          </div>
-          <div>
-            <strong>문제 생기면 좌표 공유</strong>
-            <span>렉, 보호 문제, 접속 문제는 좌표와 상황을 같이 알려주세요.</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="section faq-section" aria-labelledby="faq-title">
-        <div class="section-heading">
-          <p class="eyebrow">문제 해결</p>
-          <h2 id="faq-title">자주 막히는 부분</h2>
-        </div>
-        <div class="faq-list">
-          <details>
-            <summary>화이트리스트가 아니라고 떠요</summary>
-            <p>디스코드 #화이트리스트 채널에 적은 닉네임이 실제 마인크래프트 닉네임과 같은지 확인하세요.</p>
-          </details>
-          <details>
-            <summary>보이스챗이 연결 안 돼요</summary>
-            <p>CurseForge의 Sunlit Valley 모드팩 프로필에 Simple Voice Chat이 설치되어 있는지 확인하고, 게임 안에서 V 키를 눌러 장치를 다시 고르세요.</p>
-          </details>
-          <details>
-            <summary>지도가 안 열려요</summary>
-            <p>Controls에서 J 키가 다른 기능과 충돌하는지 확인하세요. Map 또는 FTB Chunks로 검색하면 관련 키가 나옵니다.</p>
-          </details>
-          <details>
-            <summary>렉이 심해요</summary>
-            <p>클라이언트 메모리를 8GB 근처로 올리고, 쉐이더를 끄고, 렌더 거리를 낮춘 뒤 다시 접속하세요.</p>
-          </details>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div>
-        <strong>Ventadew Valley 서버 가이드</strong>
+        <strong>Bentadew Valley 서버 가이드</strong>
         <span>비공식 신규 유저 안내 페이지입니다.</span>
       </div>
       <div class="footer-links">
-        <a href="https://www.curseforge.com/minecraft/modpacks/society-sunlit-valley" target="_blank" rel="noreferrer">모드팩</a>
+        <a href="https://www.curseforge.com/download/app" target="_blank" rel="noreferrer">CurseForge 앱</a>
         <a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank" rel="noreferrer">보이스챗</a>
         <a href="https://docs.feed-the-beast.com/mod-docs/mods/suite/Chunks/claiming-loading/" target="_blank" rel="noreferrer">청크 보호</a>
       </div>

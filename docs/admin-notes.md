@@ -1,4 +1,4 @@
-# Ventadew Valley Admin Notes
+# Bentadew Valley Admin Notes
 
 ## Update Discord Link
 
@@ -10,7 +10,7 @@ When an invite URL is ready, add it to the hero or whitelist section in `index.h
 
 - Address: `34.47.112.1:25565`
 - Whitelist: enabled
-- Site name: `Ventadew Valley`
+- Site name: `Bentadew Valley`
 - Modpack: `Society: Sunlit Valley`
 - Voice chat: `Simple Voice Chat`
 

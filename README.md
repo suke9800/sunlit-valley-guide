@@ -1,6 +1,6 @@
-# Ventadew Valley Server Guide
+# Bentadew Valley Server Guide
 
-New-player guide site for the Ventadew Valley Minecraft server, which uses the `Society: Sunlit Valley` modpack.
+New-player guide site for the Bentadew Valley Minecraft server, which uses the `Society: Sunlit Valley` modpack.
 
 ## Local Preview
 
@@ -19,7 +19,7 @@ This repository is intended for GitHub Pages. Serve from the `main` branch root.
 ## Server Facts
 
 - Server address: `34.47.112.1:25565`
-- Site name: `Ventadew Valley`
+- Site name: `Bentadew Valley`
 - Modpack: `Society: Sunlit Valley`
 - Server version reference: `4.0.9 / Minecraft 1.20.1 / Forge`
 - Voice chat: Simple Voice Chat, UDP `24454`

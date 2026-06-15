@@ -1,4 +1,6 @@
 const toast = document.querySelector(".toast");
+const pageButtons = Array.from(document.querySelectorAll("[data-page-button]"));
+const pages = Array.from(document.querySelectorAll("[data-page]"));
 let toastTimer = null;
 
 function showToast(message) {
@@ -22,21 +24,41 @@ async function copyText(value) {
   }
 }
 
+function selectPage(pageName, shouldScroll = true) {
+  const targetPage = pages.find((page) => page.dataset.page === pageName);
+  if (!targetPage) return;
+
+  pages.forEach((page) => {
+    const isTarget = page === targetPage;
+    page.classList.toggle("is-active", isTarget);
+    page.hidden = !isTarget;
+  });
+
+  pageButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.pageButton === pageName);
+  });
+
+  history.replaceState(null, "", `#${pageName}`);
+
+  if (shouldScroll) {
+    document.querySelector(".guide-shell")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+}
+
 document.querySelectorAll("[data-copy]").forEach((button) => {
   button.addEventListener("click", () => {
     copyText(button.getAttribute("data-copy"));
   });
 });
 
-document.querySelectorAll("a[href^='#']").forEach((anchor) => {
-  anchor.addEventListener("click", (event) => {
-    const targetId = anchor.getAttribute("href");
-    if (!targetId || targetId === "#") return;
-
-    const target = document.querySelector(targetId);
-    if (!target) return;
-
-    event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+pageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    selectPage(button.dataset.pageButton);
   });
 });
+
+const initialPage = window.location.hash.replace("#", "") || "install";
+selectPage(initialPage, false);
