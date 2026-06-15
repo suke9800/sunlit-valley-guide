@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Bentadew Valley 서버 신규 유저용 설치, 접속, 보이스챗, 지도, 청크 보호, 퀘스트북 가이드"
+      content="Bentadew Valley 서버 신규 유저용 설치, 접속, 보이스 모드, 지도, 청크 보호, 퀘스트북 가이드"
     />
     <meta name="theme-color" content="#1f5d44" />
     <title>Bentadew Valley 입문 가이드</title>
@@ -22,13 +22,6 @@
           <small>벤타듀 밸리 서버 가이드</small>
         </span>
       </a>
-      <nav class="top-nav" aria-label="빠른 이동">
-        <button type="button" data-page-button="install">설치</button>
-        <button type="button" data-page-button="join">접속</button>
-        <button type="button" data-page-button="voice">보이스</button>
-        <button type="button" data-page-button="map">지도</button>
-        <button type="button" data-page-button="quest">퀘스트</button>
-      </nav>
     </header>
 
     <main>
@@ -39,7 +32,7 @@
           <p class="eyebrow">Minecraft Java 1.20.1 · Forge · CurseForge</p>
           <h1>벤타듀 밸리 접속 가이드</h1>
           <p class="hero-copy">
-            앱 설치부터 서버 접속, 보이스챗, 지도와 청크 보호, 퀘스트북까지 처음 필요한 것만 정리했습니다.
+            앱 설치부터 서버 접속, 보이스 모드, 지도와 청크 보호, 퀘스트북까지 처음 필요한 것만 정리했습니다.
           </p>
 
           <div class="quick-panel" aria-label="서버 접속 정보">
@@ -75,8 +68,8 @@
           </button>
           <button class="sidebar-item" type="button" data-page-button="voice">
             <span>03</span>
-            <strong>보이스</strong>
-            <small>Simple Voice Chat 설정</small>
+            <strong>보이스 모드</strong>
+            <small>Simple Voice Chat 설치와 설정</small>
           </button>
           <button class="sidebar-item" type="button" data-page-button="map">
             <span>04</span>
@@ -87,6 +80,11 @@
             <span>05</span>
             <strong>퀘스트</strong>
             <small>퀘스트북 메뉴 찾기</small>
+          </button>
+          <button class="sidebar-item" type="button" data-page-button="rules">
+            <span>06</span>
+            <strong>규칙</strong>
+            <small>힐링 서버 기본 약속</small>
           </button>
         </aside>
 
@@ -131,7 +129,7 @@
               </div>
               <div>
                 <strong>보이스 모드</strong>
-                <span>Simple Voice Chat이 없으면 같은 프로필에서 <b>Add More Content</b>를 눌러 추가합니다.</span>
+                <span>보이스 모드는 왼쪽 <b>보이스 모드</b> 탭을 보고 설치 위치까지 확인하세요.</span>
               </div>
             </div>
           </article>
@@ -180,11 +178,11 @@
 
           <article class="guide-page" id="voice" data-page="voice" hidden>
             <div class="page-heading">
-              <p class="eyebrow">보이스</p>
-              <h2>Simple Voice Chat 설정하기</h2>
-              <p>이 서버는 가까이 있는 사람끼리 목소리가 들리는 보이스챗을 사용합니다.</p>
+              <p class="eyebrow">보이스 모드</p>
+              <h2>Simple Voice Chat 설치와 설정</h2>
+              <p>이 서버는 가까이 있는 사람끼리 목소리가 들리는 보이스 모드를 사용합니다.</p>
             </div>
-            <img class="section-art" src="assets/voice-guide.png" alt="마이크와 헤드셋으로 보이스챗을 설정하는 분위기의 장식 이미지" />
+            <img class="section-art" src="assets/voice-guide.png" alt="마이크와 헤드셋으로 보이스 모드를 설정하는 분위기의 장식 이미지" />
             <ol class="step-list">
               <li>
                 <strong>모드 확인</strong>
@@ -195,8 +193,20 @@
                 <span>프로필을 누르고 <b>Add More Content</b> → <b>Simple Voice Chat</b> 검색 → 설치합니다.</span>
               </li>
               <li>
+                <strong>수동 다운로드 위치</strong>
+                <span>브라우저에서 직접 받은 보이스 모드 파일은 보통 Windows의 <b>다운로드</b> 폴더에 <code>.jar</code> 파일로 저장됩니다.</span>
+              </li>
+              <li>
+                <strong>Sunlit Valley 폴더 열기</strong>
+                <span>CurseForge에서 Sunlit Valley 프로필의 더보기 메뉴를 누르고 <b>Open Folder</b>를 누르면 모드팩 폴더가 열립니다.</span>
+              </li>
+              <li>
+                <strong>mods 폴더에 넣기</strong>
+                <span>열린 폴더 안의 <b>mods</b> 폴더에 Simple Voice Chat <code>.jar</code> 파일을 넣고 게임을 다시 실행합니다.</span>
+              </li>
+              <li>
                 <strong>게임 안에서 V 키</strong>
-                <span>서버에 들어간 뒤 <kbd>V</kbd>를 누르면 보이스챗 메뉴가 열립니다.</span>
+                <span>서버에 들어간 뒤 <kbd>V</kbd>를 누르면 보이스 모드 메뉴가 열립니다.</span>
               </li>
               <li>
                 <strong>입출력 장치 선택</strong>
@@ -212,6 +222,10 @@
                 <strong>안 들릴 때</strong>
                 <span>Windows 입력 장치, 게임 안 V 메뉴, 마이크 음소거 상태를 차례대로 확인합니다.</span>
               </div>
+              <div>
+                <strong>앱에서 설치했다면</strong>
+                <span>CurseForge의 Add More Content로 설치한 경우에는 자동으로 mods 폴더에 들어가므로 직접 옮길 필요가 없습니다.</span>
+              </div>
             </div>
           </article>
 
@@ -222,6 +236,13 @@
               <p>집이나 중요한 농장 주변은 FTB Chunks로 보호하세요. 서버 설정은 개인당 보호 16청크, 강제 로딩 3청크입니다.</p>
             </div>
             <img class="section-art" src="assets/map-guide.png" alt="지도와 청크 보호를 보여주는 장식 이미지" />
+            <div class="warning-callout">
+              <strong>마을 터는 신중하게 고르세요.</strong>
+              <span>
+                이 모드팩에는 청사진 시스템이 있어서 이미 지어진 큰 건물과 여러 종류의 건물을 빠르게 세울 수 있습니다.
+                NPC가 사는 마을처럼 크게 확장될 수 있으니, 마을을 섣불리 짓기보다 오래 플레이할 땅을 먼저 고르는 것이 좋습니다.
+              </span>
+            </div>
             <ol class="step-list">
               <li>
                 <strong>지도 열기</strong>
@@ -274,7 +295,7 @@
               </li>
               <li>
                 <strong>사이드 화살표 보기</strong>
-                <span>퀘스트북 화면 옆에 작은 <b>화살표 메뉴</b>가 있습니다. 이걸 눌러야 다른 메뉴들이 보입니다.</span>
+                <span>퀘스트북 화면 <b>좌측</b>에 작은 <b>화살표 메뉴</b>가 있습니다. 이걸 눌러야 다른 메뉴들이 보입니다.</span>
               </li>
               <li>
                 <strong>카테고리 이동</strong>
@@ -287,12 +308,57 @@
             </ol>
             <div class="note-row">
               <div>
+                <strong>튜토리얼 필수</strong>
+                <span>처음에는 튜토리얼부터 반드시 진행하세요. 튜토리얼을 따라가야 이후 진행이 훨씬 원활합니다.</span>
+              </div>
+              <div>
                 <strong>처음 목표</strong>
                 <span>초반에는 농사와 기본 생활 퀘스트를 따라가면 자연스럽게 다음 콘텐츠가 열립니다.</span>
               </div>
               <div>
                 <strong>보상 받기</strong>
                 <span>완료한 퀘스트는 보상을 직접 눌러 받아야 할 수 있습니다.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="guide-page" id="rules" data-page="rules" hidden>
+            <div class="page-heading">
+              <p class="eyebrow">규칙</p>
+              <h2>힐링 서버 기본 약속</h2>
+              <p>벤타듀 밸리는 경쟁보다 천천히 마을을 꾸미고 생활하는 힐링 서버입니다.</p>
+            </div>
+            <img class="section-art" src="assets/rules-guide.png" alt="힐링 서버 규칙 분위기의 장식 이미지" />
+            <ol class="step-list">
+              <li>
+                <strong>힐링 서버</strong>
+                <span>이 서버는 빠른 경쟁이나 파괴 플레이보다 농사, 건축, 탐험을 천천히 즐기는 서버입니다.</span>
+              </li>
+              <li>
+                <strong>야생 구역</strong>
+                <span>야생 구역에는 마을을 건설하지 않습니다. 야생은 채집, 탐험, 광질을 위한 공간으로 사용합니다.</span>
+              </li>
+              <li>
+                <strong>마을 구역 건축</strong>
+                <span>마을 구역에는 시야를 심하게 가리는 초고층 건물, 흉측한 구조물, 주변 분위기와 맞지 않는 건축물을 짓지 않습니다.</span>
+              </li>
+              <li>
+                <strong>식물과 장식</strong>
+                <span>식물, 밭, 장식은 자유롭게 두되, 다른 사람의 길이나 건축을 막지 않게 배치합니다.</span>
+              </li>
+              <li>
+                <strong>운영자 활동</strong>
+                <span>이미 완성된 모드팩을 함께 즐기는 서버라서 운영자의 별도 업데이트나 버그 수정 활동은 거의 없습니다.</span>
+              </li>
+            </ol>
+            <div class="note-row">
+              <div>
+                <strong>문제 신고</strong>
+                <span>문제가 생기면 좌표, 상황, 스크린샷을 같이 공유하면 확인하기 쉽습니다.</span>
+              </div>
+              <div>
+                <strong>다른 사람 구역</strong>
+                <span>보호가 안 되어 있어도 다른 사람 건축물이나 청크는 건드리지 않습니다.</span>
               </div>
             </div>
           </article>
@@ -307,7 +373,7 @@
       </div>
       <div class="footer-links">
         <a href="https://www.curseforge.com/download/app" target="_blank" rel="noreferrer">CurseForge 앱</a>
-        <a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank" rel="noreferrer">보이스챗</a>
+        <a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank" rel="noreferrer">보이스 모드</a>
         <a href="https://docs.feed-the-beast.com/mod-docs/mods/suite/Chunks/claiming-loading/" target="_blank" rel="noreferrer">청크 보호</a>
       </div>
     </footer>
