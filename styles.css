@@ -65,15 +65,12 @@ kbd {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
+.brand-logo {
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--green), var(--sky));
-  color: white;
-  font-weight: 800;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(19, 43, 35, 0.16);
 }
 
 .brand strong,
@@ -116,12 +113,12 @@ kbd {
 
 .hero {
   position: relative;
-  min-height: min(760px, calc(100vh - 62px));
+  min-height: min(680px, calc(100vh - 62px));
   overflow: hidden;
   isolation: isolate;
   display: grid;
   align-items: end;
-  padding: clamp(92px, 11vh, 160px) var(--page-pad) clamp(42px, 8vh, 78px);
+  padding: clamp(72px, 9vh, 132px) var(--page-pad) clamp(36px, 6vh, 60px);
 }
 
 .hero-media,
@@ -160,7 +157,7 @@ kbd {
 
 .hero h1 {
   margin: 0;
-  max-width: 720px;
+  max-width: 760px;
   font-size: clamp(42px, 6vw, 82px);
   line-height: 1.03;
   font-weight: 900;
@@ -256,7 +253,7 @@ kbd {
 }
 
 .section {
-  padding: clamp(58px, 8vw, 96px) var(--page-pad);
+  padding: clamp(42px, 6vw, 76px) var(--page-pad);
 }
 
 .intro-band {
@@ -265,7 +262,7 @@ kbd {
 
 .section-heading {
   max-width: 720px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .section-heading h2 {
@@ -288,6 +285,36 @@ kbd {
   gap: 14px;
 }
 
+.flow-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.78fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.guide-visual {
+  margin: 0;
+  overflow: hidden;
+  align-self: start;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.guide-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.check-grid.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
 .check-item,
 .basic-card,
 .instruction,
@@ -300,8 +327,8 @@ kbd {
 }
 
 .check-item {
-  min-height: 180px;
-  padding: 20px;
+  min-height: 150px;
+  padding: 18px;
 }
 
 .step-number {
@@ -319,7 +346,7 @@ kbd {
 .instruction h3,
 .map-guide h3,
 .basic-card h3 {
-  margin: 18px 0 8px;
+  margin: 14px 0 7px;
   font-size: 19px;
 }
 
@@ -337,7 +364,7 @@ kbd {
 .split-section {
   display: grid;
   grid-template-columns: minmax(230px, 0.82fr) minmax(0, 1.25fr);
-  gap: clamp(30px, 6vw, 80px);
+  gap: clamp(26px, 5vw, 64px);
   align-items: start;
   background: var(--soft);
 }
@@ -368,7 +395,7 @@ kbd {
 
 .timeline-item {
   position: relative;
-  padding: 0 0 32px;
+  padding: 0 0 24px;
 }
 
 .timeline-item:last-child {
@@ -416,7 +443,7 @@ kbd {
 .instruction,
 .map-guide article,
 .basic-card {
-  padding: 20px;
+  padding: 18px;
 }
 
 .instruction a {
@@ -503,7 +530,7 @@ kbd {
 }
 
 .basic-card {
-  min-height: 190px;
+  min-height: 166px;
 }
 
 .rules-section {
@@ -521,8 +548,8 @@ kbd {
 }
 
 .rules-list div {
-  min-height: 116px;
-  padding: 22px;
+  min-height: 104px;
+  padding: 20px;
   background: var(--paper);
 }
 
@@ -648,6 +675,10 @@ kbd {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .flow-overview {
+    grid-template-columns: 1fr;
+  }
+
   .join-box {
     grid-template-columns: 1fr;
   }
@@ -658,7 +689,7 @@ kbd {
     position: static;
   }
 
-  .brand-mark {
+  .brand-logo {
     width: 34px;
     height: 34px;
   }
@@ -698,6 +729,7 @@ kbd {
   }
 
   .check-grid,
+  .check-grid.compact,
   .basics-grid,
   .instruction-grid,
   .map-guide,
