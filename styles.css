@@ -692,12 +692,20 @@ kbd {
 }
 
 .site-footer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 24px;
   padding: 28px var(--page-pad);
   color: var(--footer-text);
-  background: var(--footer-bg);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgba(7, 18, 14, 0.72) 0%, rgba(7, 18, 14, 0.26) 44%, rgba(7, 18, 14, 0.64) 100%),
+    linear-gradient(0deg, rgba(7, 18, 14, 0.16), rgba(7, 18, 14, 0.16)),
+    url("assets/footer-valley-bg.png") center 56% / cover no-repeat,
+    var(--footer-bg);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
 .site-footer strong,
